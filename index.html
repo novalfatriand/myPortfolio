@@ -251,21 +251,31 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-7">
-            <form>
+            <div class="alert alert-success alert-dismissible fade show d-none alertBerhasil" role="alert">
+              <strong>Thank you!</strong> We have received your message.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="myportfolio-contact-form">
               <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control formContact" id="name" aria-describedby="name">
+                <label for="nama" class="form-label">Name</label>
+                <input type="text" class="form-control formContact" id="nama" aria-describedby="nama" name="name">
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control formContact" id="email" aria-describedby="email">
+                <input type="email" class="form-control formContact" id="email" aria-describedby="email" name="email">
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
-                <textarea class="form-control formContact" id="message" rows="4"></textarea>
+                <textarea class="form-control formContact" id="message" rows="4" name="message"></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary buttonSubmit">Submit</button>
+              <button type="submit" class="btn btn-primary buttonSubmit buttonKirim">Submit</button>
+
+              <button class="btn btn-primary buttonLoading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
+
             </form>
           </div>
         </div>
@@ -294,5 +304,29 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzjal1bbOtw2uqoHaoLpiGVYkMuLnC0i7AZINOjoZRYDC9h2JC4FaVcKBEahlYFOtGH/exec'
+      const form = document.forms['myportfolio-contact-form'];
+      const buttonKirim = document.querySelector('.buttonKirim');
+      const buttonLoading = document.querySelector('.buttonLoading');
+      const alertBerhasil = document.querySelector('.alertBerhasil');
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+          buttonKirim.classList.toggle('d-none');
+          buttonLoading.classList.toggle('d-none');
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            buttonKirim.classList.toggle('d-none');
+            buttonLoading.classList.toggle('d-none');
+            alertBerhasil.classList.toggle('d-none');
+            form.reset();
+            console.log('Success!', response);
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+    
   </body>
 </html>
