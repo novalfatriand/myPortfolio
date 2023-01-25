@@ -1,0 +1,117 @@
+.body {
+    font-family: 'Poppins', sans-serif !important;
+}
+.fontDefaultNoval {
+    font-family: 'Poppins', sans-serif !important;
+}
+.secHome {
+    margin-top: 100px;
+    margin-left: 70px;
+    height: 230px;
+}
+.navbarPortfolio {
+    height: 80px;
+    margin-bottom: 10px;
+}
+.buttonAbout {
+    margin-top: 20px;
+    margin-left: -10px;
+    width: 130px;
+    background-color: #5d96cf !important;
+    border-color: #5d96cf !important;
+}
+.buttonAbout:hover {
+    background-color: #356da5 !important;
+    border-color: #356da5 !important;
+}
+.buttonSubmit {
+    width: 130px;
+    background-color: #5d96cf !important;
+    border-color: #5d96cf !important;
+}
+.buttonSubmit:hover {
+    background-color: #356da5 !important;
+    border-color: #356da5 !important;   
+}
+.h1Nama {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 55px;
+}
+.imageHero {
+    margin-left: 20px;
+    margin-top: -60px;
+}
+.secAbout {
+    background-color:rgb(220, 240, 255);
+    height: 230px;
+}
+.secProject {
+    height: 500px;
+}
+.secKontak {
+    height: 610px;
+    background-color: #eeeeee;
+}
+.footerNoval {
+    background-color: #b1b1b1 !important;
+    background-color: #5d96cf;
+    height: 80px;
+}
+.rowCarouselBesar {
+    display: none !important;
+}
+.rowCarouselNormal {
+    display: block !important;
+}
+.designedFooter {
+    margin-top: 30px;
+}
+.rowIcon {
+    margin-top: 40px !important;
+}
+.formContact {
+    border-radius: 10px !important;
+    background-color: rgb(219, 219, 219);
+    border: 1px solid rgb(219, 219, 219);   
+}
+@media screen and (max-width: 415px) {
+    .imageHero {
+        display: none;
+    }
+    .secHome {
+        margin-top: 70px;
+    }
+    .secAbout {
+        height: 290px;
+    }
+    .secProject {
+        height: 530px;
+    }
+    .secKontak {
+        height: 580px;
+    }
+    .iconSocmed {
+        display: none !important;
+    }
+    .waveAtasAbout {
+        margin-top: 200px;
+    }
+    .textAboutNoval {
+        font-size: 13px;
+    }
+    .deskripsiCarousel {
+        display: none !important;
+    }
+    .footerNoval {
+        height: 100px;
+    }
+    .rowCarouselNormal {
+        display: none !important;
+    }
+    .rowCarouselBesar {
+        display: block !important;
+    }
+    .columnKedua {
+        margin-top: 30px !important;
+    }
+}
