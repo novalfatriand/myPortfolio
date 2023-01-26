@@ -68,13 +68,18 @@
 }
 .rowIcon {
     margin-top: 40px !important;
+}.iconSocmed {
+    display: block;
 }
 .formContact {
     border-radius: 10px !important;
     background-color: rgb(219, 219, 219);
     border: 1px solid rgb(219, 219, 219);   
 }
-@media screen and (max-width: 415px) {
+.brAtas {
+    display: none !important;
+}
+@media screen and (max-width: 409px) {
     .imageHero {
         display: none;
     }
@@ -113,5 +118,59 @@
     }
     .columnKedua {
         margin-top: 30px !important;
+    }
+    .navbarOption {
+        display: none !important;
+    }
+    .brAtas {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .imageHero {
+        display: none;
+    }
+    .secHome {
+        margin-top: 70px;
+    }
+    .secAbout {
+        height: 290px;
+    }
+    .secProject {
+        height: 530px;
+    }
+    .secKontak {
+        height: 620px;
+    }
+    .iconSocmed {
+        display: none !important;
+    }
+    .waveAtasAbout {
+        margin-top: 200px;
+    }
+    .textAboutNoval {
+        font-size: 13px;
+    }
+    .deskripsiCarousel {
+        display: none !important;
+    }
+    .footerNoval {
+        height: 100px;
+    }
+    .rowCarouselNormal {
+        display: none !important;
+    }
+    .rowCarouselBesar {
+        display: block !important;
+    }
+    .columnKedua {
+        margin-top: 30px !important;
+    }
+    .navbarOption {
+        display: none !important;
+    }
+    .brAtas {
+        display: block !important;
     }
 }
